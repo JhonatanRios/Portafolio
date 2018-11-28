@@ -2,6 +2,8 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import { store } from '../../stores/store';
 
+import "./Home.scss"
+
 interface Props {
 }
 
@@ -19,7 +21,7 @@ interface State {
         return (
             <section className="home">
                 <section className="homePadre">
-                    
+                    <h1>hola</h1>
                 </section>
             </section>
         )

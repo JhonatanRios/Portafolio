@@ -20,7 +20,7 @@ interface State {
         return (
             <section className="about">
                 <section className="aboutPadre">
-                    
+                <h1>about</h1>
                 </section>
             </section>
         )

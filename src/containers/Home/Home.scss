@@ -1,0 +1,17 @@
+@import '../../../public/assets/css/General.scss';
+
+.home {
+    width: 100%;
+    align-items: center;
+
+    .homePadre {
+        width: 100%; 
+        padding-top: 6em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}

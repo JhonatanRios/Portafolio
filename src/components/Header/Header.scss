@@ -1,23 +1,26 @@
 @import '../../../public/assets/css/General.scss';
 
-.header{
+.header {
     position: fixed;
-    top: 0;
+    margin: 1em 0 0 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: stretch;
     align-items: center;
-    //background:  #ffffff;
-    background:  #61dafb;
-    width: 100%;
+    background: $white;
     text-align: center;
     z-index: 1000;
-    
-    img{
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
+
+    img {
         display: inline-block;
-        height: 10px;;
+        height: 10px;
+        ;
     }
 }
 
@@ -51,12 +54,14 @@ header .menu .logo img {
 
 .enlaces {
     display: inline-block;
-    text-align: center;    
+    text-align: center;
+    margin-left: 2em;
+    justify-content: space-between;
 }
 
 
 .enlaces a {
-    color: $white;
+    color: $black;
     display: inline-block;
     text-decoration: none;
     font-family: "Nunito", sans-serif;
@@ -67,10 +72,10 @@ header .menu .logo img {
 
 }
 
-.enlaces .tienda{
+.enlaces .tienda {
     padding: 0.7em;
     width: 4em;
-    height: 2.6em; 
+    height: 2.6em;
 }
 
 .hvr-underline-from-left {
@@ -120,24 +125,29 @@ header .menu .logo img {
 
 @-webkit-keyframes hvr-pop {
     50% {
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
-  @keyframes hvr-pop {
+}
+
+@keyframes hvr-pop {
     50% {
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
-  .hvr-pop {
+}
+
+.hvr-pop {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
-  .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+}
+
+.hvr-pop:hover,
+.hvr-pop:focus,
+.hvr-pop:active {
     -webkit-animation-name: hvr-pop;
     animation-name: hvr-pop;
     -webkit-animation-duration: 0.3s;
@@ -146,18 +156,4 @@ header .menu .logo img {
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-  }
-
-/*button {
-    margin: .5em 0;
-    border: none;
-    background: $rose;
-    color: #f2f2f2;
-    font-size: 18px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    transition: all 500ms ease;
-    padding: 1.3em 3.5em;
-    overflow: hidden;
-}*/
+}
