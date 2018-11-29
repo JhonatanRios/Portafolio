@@ -24,16 +24,16 @@ export const Header = (props: HeaderProps) => {
                     </div>
                     <div className="enlaces" id="enlaces">
                         <Link to='/' className="public hvr-underline-from-left">
-                            Home
+                            Inicio
                     </Link>
                         <Link to='/about' className="cupos hvr-underline-from-left">
-                            About
+                            Acerca de Mi
                     </Link>
                         <Link to='/project' className="historial hvr-underline-from-left">
-                            Project
+                            Projectos
                     </Link>
                         <Link to='/contact' className="historial hvr-underline-from-left">
-                            Contact
+                            Contacto
                     </Link>
                     </div>
                 </nav>

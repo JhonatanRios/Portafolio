@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { store } from '../../stores/store';
+import ReactAccelerometer from 'react-accelerometer';
 
 import "./Home.scss"
 
@@ -11,6 +12,7 @@ interface State {
 }
 
 @observer export class Home extends React.Component<Props, State> {
+    shadowStyle: any;
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -19,12 +21,20 @@ interface State {
     }
 
     render() {
+        if(store.accelerationIncludingGravity) {
+        this.shadowStyle = {
+            transform: `translate3d(${store.accelerationIncludingGravity.x * 8}px, ${store.accelerationIncludingGravity.y * 5 + 30}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
+          }
+          const imageStyle = {
+            transform: `translate3d(${store.accelerationIncludingGravity.x * 2}px, ${store.accelerationIncludingGravity.y * -2 - 10}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
+          }
+        }
+
         return (
             <section className="homePadre">
                 <section className="landing">
-                    <img src={store.imgFondo} alt="" className="portada" />
                     <div className="cont-logo">
-                        <img src={store.logo} alt="" className="portada" />
+                        <img src={store.logo} alt="" className="logo" style={this.shadowStyle} />
                     </div>
                 </section>
                 <section className="aboutmeHome">
@@ -35,7 +45,7 @@ interface State {
                         </div>
                     </div>
                     <div className="cont-myImage">
-                        <img src="src/logo.png" alt="" />
+                    <img src={store.men} alt="" className="men" />
                     </div>
                 </section>
                 <section className="viewProjects">
