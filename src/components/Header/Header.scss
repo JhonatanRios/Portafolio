@@ -1,6 +1,7 @@
 @import '../../../public/assets/css/General.scss';
 
 .header {
+    width: 75%;
     position: fixed;
     margin: 1em 0 0 1em;
     display: flex;
@@ -26,7 +27,6 @@
 
 header .menu {
     width: 100%;
-    max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -111,18 +111,6 @@ header .menu .logo img {
     right: 0;
 }
 
-.headroom {
-    transition: transform .3s ease;
-}
-
-.headroom--pinned {
-    transform: translateY(0%);
-}
-
-.headroom--unpinned {
-    transform: translateY(-100%);
-}
-
 @-webkit-keyframes hvr-pop {
     50% {
         -webkit-transform: scale(1.2);
@@ -156,4 +144,25 @@ header .menu .logo img {
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+}
+
+.headroom {
+    transition: transform .3s ease;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+@media screen and (max-width: $break-small) {
+    width: 100px;
+    float: none;
+}
+
+@media screen and (min-width: $break-large) {
+    float: right;
 }

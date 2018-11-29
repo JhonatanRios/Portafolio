@@ -12,18 +12,20 @@ interface State {
 
 @observer export class Home extends React.Component<Props, State> {
     constructor(props: Props) {
-        super(props);
-        this.state = {
-        }
+    super(props);
+    this.state = {
+        
+    }
     }
 
     render() {
         return (
             <section className="home">
                 <section className="homePadre">
+                    <img src={store.imgFondo} alt="" className="portada" />
                     <h1>hola</h1>
                 </section>
             </section>
         )
     }
-}
+    }

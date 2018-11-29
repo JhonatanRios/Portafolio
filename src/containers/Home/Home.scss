@@ -5,13 +5,29 @@
     align-items: center;
 
     .homePadre {
-        width: 100%; 
+        width: 100%;
         padding-top: 6em;
+        position: relative;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-content: center;
         align-items: center;
+
+        .portada {
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
     }
+}
+
+@media screen and (max-width: $break-small) {
+    width: 100px;
+    float: none;
+}
+
+@media screen and (min-width: $break-large) {
+    float: right;
 }
