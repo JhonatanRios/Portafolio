@@ -12,7 +12,7 @@ interface State {
 }
 
 @observer export class Home extends React.Component<Props, State> {
-    shadowStyle: any;
+    shadowStyle: any = null;
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -21,13 +21,13 @@ interface State {
     }
 
     render() {
-        if(store.accelerationIncludingGravity) {
-        this.shadowStyle = {
-            transform: `translate3d(${store.accelerationIncludingGravity.x * 8}px, ${store.accelerationIncludingGravity.y * 5 + 30}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
-          }
-          const imageStyle = {
-            transform: `translate3d(${store.accelerationIncludingGravity.x * 2}px, ${store.accelerationIncludingGravity.y * -2 - 10}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
-          }
+        if (store.accelerationIncludingGravity) {
+            this.shadowStyle = {
+                transform: `translate3d(${store.accelerationIncludingGravity.x * 8}px, ${store.accelerationIncludingGravity.y * 5 + 30}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
+            }
+            const imageStyle = {
+                transform: `translate3d(${store.accelerationIncludingGravity.x * 2}px, ${store.accelerationIncludingGravity.y * -2 - 10}px, 0) rotateY(${-store.accelerationIncludingGravity.x * 3}deg)`
+            }
         }
 
         return (
@@ -45,18 +45,40 @@ interface State {
                         </div>
                     </div>
                     <div className="cont-myImage">
-                    <img src={store.men} alt="" className="men" />
+                        <img src={store.men} alt="" className="men" />
                     </div>
                 </section>
                 <section className="viewProjects">
-                    <h1>PROYECTOS</h1>
                     <div className="cont-projects">
-                        <div className="projectSelect">
-
+                        <div className="cont-projectTitle">
+                            <div className="projectTitle">
+                                <h1>PRO<br /><span>-</span>YEC<br /><span>--</span>TOS</h1>
+                            </div>
                         </div>
-                        <div className="moreProjects">
+                        <div className="Projects">
                             <div className="otherProject">
+                                <img src="" alt="" />
+                                <h2></h2>
+                                <h3></h3>
+                                <button>
 
+                                </button>
+                            </div>
+                            <div className="otherProject">
+                                <img src="" alt="" />
+                                <h2></h2>
+                                <h3></h3>
+                                <button>
+
+                                </button>
+                            </div>
+                            <div className="otherProject">
+                                <img src="" alt="" />
+                                <h2></h2>
+                                <h3></h3>
+                                <button>
+
+                                </button>
                             </div>
                         </div>
                     </div>
