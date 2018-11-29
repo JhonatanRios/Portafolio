@@ -17,10 +17,8 @@ import { Contact } from '../Contact/Contact';
         return (
             <Router>
                 <section>
-                        <div className="menu">
-                            <Header
-                                img="./assets/img/logo.png" />
-                        </div>
+                    <Header
+                        img="./assets/img/logo.png" />
                     <div className="cuerpo">
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
